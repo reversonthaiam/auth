@@ -1,8 +1,12 @@
-<div>
-  <% if notice  %>
-    <p class="notice"><%= notice %></p>
+<div class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 space-y-4 w-11/12 max-w-md">
+  <% if notice %>
+    <p class="bg-green-100 text-green-800 border border-green-300 px-4 py-2 rounded-lg shadow-md text-sm font-medium animate-fade-in">
+      <%= notice %>
+    </p>
   <% end %>
   <% if alert %>
-    <p class="alert"><%= alert %></p>
+    <p class="bg-red-100 text-red-800 border border-red-300 px-4 py-2 rounded-lg shadow-md text-sm font-medium animate-fade-in">
+      <%= alert %>
+    </p>
   <% end %>
 </div>
