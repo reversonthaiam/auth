@@ -23,4 +23,12 @@ class ArticlePolicy < ApplicationPolicy
   def edit?
     update?
   end
+
+  def new?
+    create?
+  end
+
+  def create?
+    user&.has_role? :writer
+  end
 end
